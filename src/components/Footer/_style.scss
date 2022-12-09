@@ -1,5 +1,19 @@
 .footer {
-  background-color: red;
-  height: 100px;
+  background-color: var(--dark);
+  box-sizing: border-box;
+
+  padding-left: var(--sideLeft);
+  padding-right: var(--sideRight);
+
+  line-height: 128px;
   width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 45px;
+
+  div {
+    color: var(--white);
+    letter-spacing: 0.033px;
+  }
 }

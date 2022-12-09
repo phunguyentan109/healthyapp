@@ -13,6 +13,16 @@
   src: url('assets/fonts/Noto_Sans_JP/NotoSansJP-Regular.otf');
 }
 
+@font-face {
+  font-family: 'Noto Light';
+  src: url('assets/fonts/Noto_Sans_JP/NotoSansJP-Light.otf');
+}
+
+@font-face {
+  font-family: 'Noto Thin';
+  src: url('assets/fonts/Noto_Sans_JP/NotoSansJP-Thin.otf');
+}
+
 :root {
   --dark: #414141;
   --darker: #2E2E2E;
@@ -22,13 +32,35 @@
   --lightOrange: #FF963C;
   --orange: #EA6C00;
   --aqua: #8FE9D0;
-  --gradient: linear-gradient(180deg, #FFCC21 0%, #FF963C 100%);
+  --gradient: linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%);
 
-  --sideLeft: 50px;
-  --sideRight: 50px;
+  --sideLeft: 160px;
+  --sideRight: 160px;
 }
 
 body {
   margin: 0 !important;
-  font-family: "Noto Regular", sans-serif;
+  font-family: "Noto Light", sans-serif;
+  position: relative;
+}
+
+#root {
+  overflow: auto;
+  height: 100vh;
+  width: 100vw;
+}
+
+.moreBtn {
+  display: block;
+  width: 296px;
+  height: 56px;
+  outline: none;
+  border: none;
+  margin: 0 auto 64px;
+
+  background: var(--gradient);
+  color: var(--white);
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
 }

@@ -1,9 +1,8 @@
-// import Login from 'views/Login'
-// import Chat from 'views/Chat/Loader'
-
 import { ReactElement } from 'react'
 import ColumnPage from './views/ColumnPage'
 import TopPage from './views/TopPage'
+import MyRecord from './views/MyRecord'
+import { Navigate } from 'react-router-dom'
 
 export const SESSION_AUTH = 'healthySession'
 
@@ -16,26 +15,23 @@ export const ROUTE_PERMISSION = {
 export type IRouter = {
   path: string
   element: ReactElement
-  notFoundRedirect?: boolean
-  permission: string
 }
 
 export const allRouters: IRouter[] = [
   {
-    path: '/',
+    path: '/column',
     element: <ColumnPage />,
-    notFoundRedirect: true,
-    permission: ROUTE_PERMISSION.login,
   },
   {
-    path: '/top',
+    path: '/',
     element: <TopPage />,
-    permission: ROUTE_PERMISSION.top,
-    notFoundRedirect: true,
   },
   {
     path: '/record',
-    element: <div>About</div>,
-    permission: ROUTE_PERMISSION.record,
+    element: <MyRecord />,
+  },
+  {
+    path: '*',
+    element: <Navigate to='/' />,
   },
 ]
